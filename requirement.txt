@@ -1,6 +1,6 @@
 matplotlib
 torchvision
-torch>=1.0.0
+torch==2.0.0
 pandas
 plotly
 cufflinks
