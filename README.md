@@ -1,3 +1,13 @@
+# usage
+[!Note]
+pytorch v2.1.0 may report error about meshgrid something
+
+**to just use one gpu**
+```bash
+python benchmark_models.py
+```
+
+
 # About
 Comparison of learning and inference speed of different GPU with various CNN models in __pytorch__
 
