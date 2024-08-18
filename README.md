@@ -1,6 +1,6 @@
 # usage
-[!Note]
-pytorch v2.1.0 may report error about meshgrid something
+> [!NOTE]
+> pytorch v2.1.0 may report error about meshgrid something
 
 **to just use one gpu**
 ```bash
