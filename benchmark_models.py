@@ -18,17 +18,21 @@ torch.backends.cudnn.benchmark = True
 # If you check it using the profile tool, the cnn method such as winograd, fft, etc. is used for the first iteration and the best operation is selected for the device.
 
 
-MODEL_LIST = {
-    models.mnasnet: models.mnasnet.__all__[1:],
-    models.resnet: models.resnet.__all__[1:],
-    models.densenet: models.densenet.__all__[1:],
-    models.squeezenet: models.squeezenet.__all__[1:],
-    models.vgg: models.vgg.__all__[1:],
-    models.mobilenet: models.mobilenet.mv2_all[1:],
-    models.mobilenet: models.mobilenet.mv3_all[1:],
-    models.shufflenetv2: models.shufflenetv2.__all__[1:],
-}
+# MODEL_LIST = {
+#     models.mnasnet: models.mnasnet.__all__[1:],
+#     models.resnet: models.resnet.__all__[1:],
+#     models.densenet: models.densenet.__all__[1:],
+#     models.squeezenet: models.squeezenet.__all__[1:],
+#     models.vgg: models.vgg.__all__[1:],
+#     models.mobilenet: models.mobilenet.mv2_all[1:],
+#     models.mobilenet: models.mobilenet.mv3_all[1:],
+#     models.shufflenetv2: models.shufflenetv2.__all__[1:],
+# }
 
+MODEL_LIST = {
+    models.resnet: ['resnet50'],
+    models.mobilenet: models.mobilenet.mv3_all[1:],
+}
 precisions = ["float", "half", "double"]
 # For post-voltaic architectures, there is a possibility to use tensor-core at half precision.
 # Due to the gradient overflow problem, apex is recommended for practical use.
